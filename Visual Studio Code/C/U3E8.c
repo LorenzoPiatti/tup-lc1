@@ -8,9 +8,7 @@ void main()
 {
     float saldoCuentaBancaria, retiroCuentaBancaria;
 
-    printf("Ingrese el saldo de la cuenta bancaria:\n");
-    
-    scanf("%f", &saldoCuentaBancaria);
+    saldoCuentaBancaria = 150000;
 
     printf("Ingrese el saldo a retirar:\n");
 
