@@ -11,7 +11,11 @@ void main()
 
     scanf("%f %f %f", &num1, &num2, &num3);
 
-    if (num3 < num1 && num1 > num2)
+    if (num1 == num2 && num2 == num3)
+    {
+        printf("Los tres numeros ingresados son iguales.\n");
+    }
+    else if (num3 < num1 && num1 > num2)
     {
         printf("El siguiente numero es el mayor:%.2f\n", num1);
     }
