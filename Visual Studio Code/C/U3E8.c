@@ -14,7 +14,7 @@ void main()
 
     scanf("%f", &retiroCuentaBancaria);
 
-    if (saldoCuentaBancaria < 0 || retiroCuentaBancaria < 0)
+    if (retiroCuentaBancaria <= 0)
     {
         printf("Los datos ingresados no son validos.\n");
     }
