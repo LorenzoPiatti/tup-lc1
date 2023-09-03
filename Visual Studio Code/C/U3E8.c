@@ -8,7 +8,7 @@ void main()
 {
     float saldoCuentaBancaria, retiroCuentaBancaria;
 
-    saldoCuentaBancaria = 150000;
+    saldoCuentaBancaria = 153489.69;
 
     printf("Ingrese el saldo a retirar:\n");
 
