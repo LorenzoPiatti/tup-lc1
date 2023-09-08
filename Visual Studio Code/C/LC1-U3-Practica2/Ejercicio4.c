@@ -6,7 +6,7 @@ void main()
 {
     int i, suma = 0;
 
-    for (i = 1; i <= 10 ; i++)
+    for (i = 1; i <= 10 ; i+=2)
     {
         suma = suma + i;
     }
