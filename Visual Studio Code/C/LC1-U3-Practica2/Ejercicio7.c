@@ -5,5 +5,12 @@
 
 void main()
 {
-    int i;
+    int i, suma;
+
+    for (i = 1; i <= 40 ; i+=2)
+    {
+        suma = suma + i;
+    }
+    printf("La suma es: %i", suma);
+
 }
