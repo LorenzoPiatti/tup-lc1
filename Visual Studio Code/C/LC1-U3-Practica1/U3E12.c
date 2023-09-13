@@ -259,6 +259,5 @@ void main()
         printf("DNI no valido.\n");
         goto salir;
     }
-
     system("pause");
 }
