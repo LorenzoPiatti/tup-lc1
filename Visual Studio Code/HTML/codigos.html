@@ -1,0 +1,332 @@
+<!-- Codigos para HTML -->
+
+<!-- Estructura Basica -->
+
+<! DOCTYPE html> <!-- define que este documento es un documento HTML5 -->
+<html></html> <!-- es el elemento raíz de una página HTML -->
+<head></head> <!-- contiene meta-información sobre la página HTML -->
+<title></title> <!-- especifica un título para la página HTML -->
+<body></body> <!-- define el cuerpo del documento y es un contenedor para todos los contenidos visibles, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc. -->
+<h1></h1> <!-- define un encabezado grande -->
+<p></p> <!-- define un párrafo -->
+
+<!-- Elementos -->
+
+<!-- Los elementos de nivel de bloque más utilizados son -->
+
+<div> <!-- unidad contenedora que se utiliza para agrupar y organizar otros elementos HTML -->
+<p> <!-- parrafo -->
+<h1> <!-- representa el encabezado principal de una página web o una sección de una página -->
+<h6> <!-- representa un encabezado de nivel inferior en una página web o una sección de una página -->
+<form> <!-- se utiliza para crear un formulario, donde los usuarios proporcionan datos de entrada, como texto, casillas de verificación, botones de opción o botones de envío. -->
+<ol> <!-- se utiliza para crear una lista ordenada, donde los elementos de la lista están marcados con números, letras u otros símbolos secuenciales -->
+<ul> <!-- se utiliza para definir una lista desordenada, donde cada elemento de la lista está marcado con una viñeta de forma predeterminada. -->
+<li> <!-- representa un único elemento dentro de una lista y se utiliza para definir el contenido de cada elemento. puede contener cualquier tipo de contenido, como texto, enlaces, imágenes u otros elementos HTML -->
+
+<!-- Por otro lado, los elementos de nivel en línea más utilizados son --> 
+
+<img> <!-- se utiliza para incrustar una imagen en una página web -->
+<a> <!-- se utiliza para crear un hipervínculo (links) -->
+<span> <!-- se utiliza para agrupar una parte del texto o contenido con fines de estilo o manipulación de texto -->
+<strong> <!-- se utiliza para enfatizar la importancia de un fragmento de texto, haciéndolo más prominente y visualmente distinguible -->
+<b> <!-- se utiliza para llamar la atención sobre una parte del texto haciéndolo parecer visualmente distinto -->
+<em> <!-- se utiliza para enfatizar la importancia de una parte del texto -->
+<i> <!-- se utiliza para representar una voz o un estado de ánimo alternativo -->
+<input> <!-- se utiliza para crear un control de formulario interactivo, lo que permite a los usuarios ingresar o manipular datos, como texto, números, archivos o enviar el formulario a un servidor. se utiliza dentro de un <form> -->
+<button> <!-- se utiliza para crear botones en los que se puede hacer clic y que pueden realizar diversas acciones -->
+
+<!-- Atributos -->
+
+id <!-- Nos deja establecer un identificador único a un elemento. No debería haber más de dos elementos con el mismo id en la misma página -->
+class <!-- Al igual que id, este atributo nos permite identificar a un elemento de la página, con la diferencia de que podemos tener muchos elementos con una misma clase -->
+style <!-- sirve para darle estilo CSS a un elemento en particular -->
+hidden <!-- sirve para establecer si el navegador debe mostrar o no un elemento -->
+
+<!-- Parrafos -->
+
+<br /> <!-- define un salto de línea -->
+<hr /> <!-- dibuja una línea -->
+<pre></pre> <!-- es similar al tag “p” pero el texto se dibuja en un formato “cursiva” y mantiene los saltos de línea colocados en el código -->
+<b></b> <!-- texto en negrita -->
+<strong></strong> <!-- texto importante -->
+<i></i> <!-- texto en cursiva -->
+<em></em> <!-- texto enfatizado -->
+<mark></mark> <!-- texto marcado -->
+<small></small> <!-- texto más pequeño -->
+<del></del> <!-- texto eliminado -->
+<ins></ins> <!-- texto insertado -->
+<sub></sub> <!-- texto de subíndice -->
+<sup></sup> <!-- texto en superíndice -->
+
+<!-- Links -->
+
+<a> href="<!-- aca va el link -->" target="<!-- Atributo del target -->" </a>
+
+<a> href="<!-- aca va el link -->" title="<!-- texto a mostrar -->" </a>
+
+target="" <!-- especifica dónde abrir el documento vinculado -->
+_self <!-- abre el documento en la misma ventana/pestaña -->
+_blank <!-- abre el documento en una nueva ventana o pestaña -->
+_parent <!-- abre el documento en el marco principal -->
+_top <!-- abre el documento en todo el cuerpo de la ventana -->
+title="" <!-- nos permite mostrar un texto que aparece cuando el usuario posiciona el cursor sobre el enlace -->
+
+<!-- Imagenes -->
+
+<img src="Link imagen" alt="texto con descripción de la imagen" width="nos permiten setear el tamaño de la
+imagen" height="nos permiten setear el tamaño de la
+imagen" />
+
+<!-- Tablas -->
+
+<tr> <!-- Representan las filas de una tabla -->
+<td> <!-- Son las celdas de la tabla. Ahí dentro se ubicará la información de la misma. -->
+<th> <!-- Son celdas que representan encabezados de tabla.-->
+
+<table>
+    <tr>
+        <th>texto</th>
+    </tr>
+    <tr>
+        <td>texto</td>
+    </tr>
+</table>
+
+<thead> <!-- Representa la sección superior (encabezado) de una tabla. Puede haber solo un elemento thead en una tabla. -->
+<tbody> <!-- Es el cuerpo de la tabla. Ahí dentro estarán los datos de la tabla. Pueden haber varios tbody en una tabla. -->
+<tfoot> <!-- Pie de tabla. Se usa generalmente para expresar resultados, como por ejemplo total de una compra. Solo puede haber un solo tfoot dentro de una tabla. -->
+
+<table>
+    <thead>
+        <tr>
+            <th>texto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>texto</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>texto</td>
+        </tr>
+    </tfoot>
+</table>
+
+<!-- Colspan y Rowspan. Permiten unir una celda con las celdas contiguas, tanto horizontal como verticalmente Sirven para <td> y para <th> -->
+
+<th rowspan="numero de celdas vertical">texto</th>
+<td colspan="numero de celdas horizontal">texto</td>
+
+<!-- La etiqueta <caption> sirve para definir un título a la tabla. Debe ser declarada apenas se inicia la etiqueta de <table> -->
+
+<table>
+    <caption>titulo</caption>
+</table>
+
+<!-- Formulario -->
+
+<form> <!-- Es la etiqueta que engloba y declara el formulario. Funciona como contenedor y da directivas básicas sobre dónde y de qué forma debe enviar la información -->
+<input> <!-- Representa un campo de entrada de un formulario. Puede tener diferentes tipos, de acuerdo a la información que se desea ingresar -->
+<label> <!-- Se utiliza para etiquetar los campos de entrada, dándoles un nombre representativo para comprender qué información debe ingresarse en cada uno -->
+<button> <!-- Sirve para definir un botón clickeable, que se utilizara para disparar acciones en el formulario -->
+
+<!-- Atributos <form> -->
+
+action="" <!-- define la dirección a donde sera enviada la información de nuestro formulario. Esta información será enviada cuando el usuario clickee el botón de tipo submit -->
+method="" <!-- hace referencia al método HTTP a ser usado para enviar los datos del formulario. Puede ser GET o POST -->
+target="" <!-- es la definición de donde se mostrará la respuesta del envío de este formulario -->
+
+<form action=""></form>
+<form method=""></form>
+<form target=""></form>
+
+<form action="/accion.php" method="post" target="_blank">
+    <label for="nombre">nombre</label>
+    <input type="text" id="nombre" name="nombre" value="Juan" />
+
+    <input type="submit" value="Submit" />
+</form>
+
+<!-- Atributos <input> -->
+
+type <!-- define el tipo del input. Los mas comunes son text, password, number, submit, radio, checkbox -->
+name <!-- Cada elemento <input> debe incluir una etiqueta name para que este sea enviado a través del formulario -->
+value <!-- expresa el valor inicial de un input -->
+required <!-- especifica que el input es de solo lectura y no puede ser modificado -->
+disabled <!-- de estar presente, declara que el input estará
+deshabilitado. Su valor no será enviado por el formulario -->
+readonly <!-- especifica que el input es de solo lectura y no puede ser modificado. Su valor será enviado por el formulario -->
+placeholder <!-- sirve de texto de ejemplo para inputs -->
+size <!-- declara el tamaño en caracteres del input -->
+maxlength <!-- declara la cantidad máxima de caracteres a
+ingresar -->
+autocomplete <!-- aclara si es un campo autocompletado -->
+
+<input
+    type="text"
+    name="texto"
+    value="Esto es un texto deshabilitado"
+    size="40"
+    disabled
+/>
+
+<input
+    type="text"
+    name="texto"
+    placeholder="Ingrese un texto"
+    size="60"
+    maxlength="20"
+    required
+    autocomplete
+/>
+
+<!-- Tipos de <input> -->
+
+password <!-- sirven para campos de claves, que no deben
+ser vistos -->
+number <!-- sirve para campos numéricos -->
+checkbox <!-- sirve para seleccionar varias opciones de
+check -->
+radio <!-- sirve para elegir una opción entre varias -->
+date <!-- sirve para campos de fecha. Al hacer click,
+muestra un selector de fecha en calendario -->
+button <!-- define simplemente un botón, sin funcionalidad
+por defecto -->
+submit <!-- define un botón, que incluye la funcionalidad de
+enviar los datos del formulario, con la información
+declarada en el tag de form -->
+
+<form action="/accion.php">
+    <label for="password">Clave</label>
+    <input type="password" name="password" id="password" />
+
+    <label for="number">numero</label>
+    <input type="number" name="number" id="number" />
+
+    <label for="checkbox">Check</label>
+    <input type="checkbox" name="checkA" id="checkB" />
+    <input type="checkbox" name="checkB" id="checkB" />
+
+    <label for="password">Opcion</label>
+    <input type="radio" name="radio" id="radioA" />
+    <input type="radio" name="radio" id="radioB" />
+
+    <label for="date">Fecha</label>
+    <input type="date" name="date" id="date" />
+
+    <input type="button" value="Boton" />
+    <input type="submit" value="Enviar" />
+</form>
+
+<select> <!-- define un componente de selección desplegable. Dentro de esta etiqueta, debemos ubicar otras llamadas etiquetas de opción, definidas por --> 
+<option> <!-- que representarán las opciones de selección la misma. -->
+
+<label for="seleccionable">Seleccionar</label>
+<select name="seleccionable" id="seleccionable">
+    <option value="Opcion A">Opcion A</option>
+    <option value="Opcion B">Opcion B</option>
+    <option value="Opcion C">Opcion C</option>
+    <option value="Opcion D">Opcion D</option>
+</select>
+
+<fieldset> <!-- Los elementos del formulario que estén dentro de la etiqueta fieldset, serán agrupados dentro de una caja con borde -->
+
+<fieldset>
+    <legend>Datos del Usuario:</legend>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre">
+</fieldset>
+
+<!-- Div -->
+
+<!-- El elemento --> <div></div> <!-- hace referencia a división y sirve para crear secciones o agrupar contenidos -->
+<!-- podremos agregarle las propiedades “comunes”,
+es decir, las propiedades “id”, “class” y “style” -->
+
+<!-- Elemento HEAD -->
+
+<!-- El elemento --> <head></head> <!-- debe ser el primer hijo de nuestro elemento --> <html></html>
+
+<!-- Listado de elementos -->
+
+<title></title> <!-- es obligatorio y define el título del documento -->
+<style></style> <!-- se usa para definir información de estilo para un solo documento se coloca el código CSS directamente dentro de este elemento -->
+<link> <!-- se usa con mayor frecuencia para vincular a hojas de estilo externas -->
+<meta> <!-- se utiliza normalmente para especificar el conjunto de caracteres, la descripción de la página, las palabras clave, el autor del documento y la configuración de la ventana gráfica -->
+<script></script> <!-- se utiliza para agregar JS a nuestro documento, pudiendo hacerlo directamente dentro del elemento o asociando a un archivo externo -->
+<base> <!-- especifica la URL base y / o el destino para todas las URL relativas en una página -->
+
+<!-- Validaciones de Formularios -->
+
+required <!-- Especifica si un campo de formulario
+debe completarse antes de que se pueda enviar el
+formulario -->
+minlength y maxlength <!-- Especifican la longitud
+mínima y máxima de los datos de texto (cadenas) -->
+min y max <!-- Especifican los valores mínimo y
+máximo de los tipos de entrada numéricos -->
+type <!-- Especifica si los datos deben ser un número,
+una dirección de correo electrónico o algún otro
+tipo de preajuste específico -->
+pattern <!-- Especifica una expresión regular que
+define un patrón que los datos que se introduzcan
+deben seguir -->
+
+<form
+    required
+    minlength
+    maxlength
+    min
+    max
+    type
+    pattern >
+</form>
+
+<!-- InLine Frame -->
+
+<iframe></iframe> <!-- representa un contexto de navegación anidado, el cual permite incrustar otra página HTML en la página actual -->
+
+<iframe
+    width=""
+    height=""
+    src=""
+    title=""
+    frameborder=""
+    allow=""
+    allowfullscreen >
+</iframe>
+
+<!-- Audio -->
+
+<audio></audio> <!-- es usada para agregar contenido en forma de sonido, como música u algun stream de audio.
+Contiene una o más etiquetas --> <source> <!-- que especifica las fuentes de audio para ese elemento -->
+
+<audio controls>
+    <source src="musica.ogg" type="audio/ogg">
+    <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Picture -->
+
+<picture></picture> <!-- le brinda al desarrollador una mayor flexibilidad a la hora de especificar recursos de imagen. 
+Su uso más común es para diagramar un diseño responsivo. 
+Se especifican múltiples elementos -->
+<source> <!-- y un elemento --> <img>
+
+<picture>
+    <source media="(min-width:650px)" srcset="img_A.jpg">
+    <source media="(min-width:465px)" srcset="img_B.jpg">
+    <img src="img_C.jpg" alt="Estadio" style="width:auto;">
+</picture>
+
+<!-- Canvas -->
+
+<canvas></canvas> <!-- se puede utilizar para dibujar gráficos a través de secuencias de comandos. Solo tiene los atributos width y height -->
+
+<canvas
+    id="myCanvas"
+    width="200"
+    height="100">
+</canvas>
