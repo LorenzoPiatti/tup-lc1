@@ -1,8 +1,7 @@
 """Comparación"""
 
 """
-Construir una expresión lógica que use TODAS las variables y cuyo resultado sea
-True si 2 personas tienen el mismo nombre pero distinta edad.
+Construir una expresión lógica que use TODAS las variables y cuyo resultado sea True si 2 personas tienen el mismo nombre pero distinta edad.
 Aclaración: Se puede utilizar and, or y not.
 """
 
@@ -12,7 +11,8 @@ persona_02 = "Kevin"
 edad_02 = 41
 
 # COMPLETAR - INICIO
-
+comparar_nombre_y_edad = (persona_01 and persona_02) and not(edad_01 and not edad_02)
+print(comparar_nombre_y_edad)
 # COMPLETAR - FIN
 
 assert comparar_nombre_y_edad
@@ -28,7 +28,8 @@ marca_del_auto = "Chevrolet"
 modelo_de_auto = 1998
 
 # COMPLETAR - INICIO
-
+comparar_marca_y_modelo = marca_del_auto and "Ford" and modelo_de_auto <= 2000
+print(comparar_marca_y_modelo)
 # COMPLETAR - FIN
 
 assert comparar_marca_y_modelo
@@ -46,7 +47,11 @@ superficie_de_campo_02 = 851212
 superficie_de_campo_03 = 8512
 
 # COMPLETAR - INICIO
-
+if superficie_de_campo_01 < superficie_de_campo_02 > superficie_de_campo_03:
+    comparar_superficie = True
+else:
+    comparar_superficie = False
+print(comparar_superficie)
 # COMPLETAR - FIN
 
 assert comparar_superficie
@@ -66,7 +71,11 @@ manzanas = 300
 peras = 30
 
 # COMPLETAR - INICIO
-
+if bananas < (naranjas / 2) < (manzanas * 2) <= (peras ** 2):
+    comparar_frutas = True
+else:
+    comparar_frutas = False
+print(comparar_frutas)
 # COMPLETAR - FIN
 
 assert comparar_frutas

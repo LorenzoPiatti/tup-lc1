@@ -10,7 +10,8 @@ Definir un diccionario para un 'Cliente' que contenga los siguiente valores:
 """
 
 # COMPLETAR - INICIO
-
+Cliente = {"Nombre":"Mario Pedernera","DNI":56895632,"Domicilio":"Los alamos 4509","Compras":list("cafetera","TV 50 pulgadas","mouse gamer")}
+print(Cliente)
 # COMPLETAR - FIN
 
 assert (
