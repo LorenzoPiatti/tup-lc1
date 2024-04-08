@@ -1,0 +1,466 @@
+<h1>Tipos de Linkear Css a Html</h1>
+
+Css Externo:
+<head>
+    <link rel="stylesheet" href="css./style.css">
+</head>
+Css Interno:
+<head>
+    <style>
+        h1{
+            color:red;
+            text-align: center;
+        }
+    </style>
+</head>
+Css en Linea:
+<h1 style="color: red; text-align: center;">TextoPrincipal</h1>
+
+<h1>Comentarios en linea</h1>
+// Comentario
+<h1>Comentarios en bloques</h1>
+/* Comentario */
+
+<h2>>Css Sintaxis:</h2>
+h1 {color:blue; font-size: 12px;}
+
+<h2>Css - Selectores:</h2>
+Selector Semantico:
+p {color:blue; font-size: 12px;}
+
+<h3>Selector Id:</h3>
+<div id="selector"></div>
+#selector {color:blue; font-size: 12px;}    
+
+<h3>Selector de Clase:</h3>
+<div class="selector"></div>
+.selector{color:blue; font-size: 12px;}   
+
+<h3>Selector Universal: (Aplica a todos los elementos)</h3>
+* {color:blue; font-size: 12px;}
+
+<h3>Seleccionar de varias elementos:</h3>
+h1,h2,h3 {color:blue; font-size: 12px;}
+
+<h3>Selector Descenciente:</h3>
+body, p, .ultimoParrafo {color:blue; font-size: 12px;}
+
+<h3>Selector >:</h3>
+div > a {color:red;}
+Cambiara el color de las anclas dentro del div unicamente (Hijos dentro del div)
+
+<h3>Selectores multiples:</h3>
+p {text-align:center; color:red;}
+p {color:gray;}
+Toma el alineamente y rojo - Luego lo cambia a color gris
+
+<h3>Jerarquia y especificidad de selectores</h3>
+*          =  0
+Semanticos =  1
+Clases    =  10
+Id        = 100
+En linea = 1000
+Important=99999999...
+
+<h3>El estilo aplicará la ultima hoja linkeada si tiene la misma jerarquia y la misma especificidad</h3>
+
+<h3>Important</h3>
+!important - Anula las otras reglas y le da prioridad a esa.
+p{
+    background-color: red !important;
+} 
+#parrafo{
+    background-color: blue;
+}
+
+<h2>Box model</h2>
+content: Contenido interior de la caja
+padding: Linea por fuera al content
+border: Linea fuera del padding
+margin: fuera de border y capa final
+
+<h3>Margin</h3>
+Se utiliza para generar espacio por fuera dle Contenido
+<h2>Propiedades</h2>
+margin-top: espacio hacia arriba
+margin-right: espacio hacia la derecha
+margin-left: espacio hacia la izquierda
+margin-bottom: hacia abajo
+margin: 25px 50px 60px 30px  #Sentido de las agujas del reloj, arriba derecha abajo izquierda (Abreviatura)
+<h3>Pueden ser no solo de px</h3>
+auto: se calcula por margin
+longitud: em, px, rem
+porcentaje: %
+
+<h3>Padding</h3>
+padding-top: espacio hacia arriba
+padding-right: espacio hacia la derecha
+padding-left: espacio hacia la izquierda
+padding-bottom: hacia abajo
+<h3>Pueden ser no solo de px</h3> #Sentido de las agujas del reloj, arriba derecha abajo izquierda (Abreviatura)
+auto: se calcula por margin
+longitud: em, px, rem
+porcentaje: %
+
+<h3>Border</h3>
+border-top: espacio hacia arriba
+border-right: espacio hacia la derecha
+border-left: espacio hacia la izquierda
+border-bottom: hacia abajo
+<h3>Pueden ser no solo de px</h3> 
+auto: se calcula por margin
+longitud: em, px, rem
+porcentaje: %
+<h3>Propiedades adicionales de border</h3>
+border-color: border-color
+border-style: (dashed, solid, dotted, double, groove, inset, outset, none, hidden)
+border-width: #Sentido de las agujas del reloj, arriba derecha abajo izquierda (Abreviatura)
+border-radius: nos permite redondear las puntas
+
+<h2>Height - Width (Alto y ancho)</h2>
+Nos permite modificar el ancho y alto de un elementos
+<h3>Valores que puede tomar esta propiedad</h3>
+auto: es un valor predeterminado, el navegador calcula la altura y el ancho
+length: (Longitud) define alto/ancho en px, cm, etc
+%: define alto/ancho en porcentaje al bloque del Contenedor
+initial: establece alto/ancho en su valor predeterminado
+inherit: (heredar) alto/ancho se heredara el valor de su elemento padre.
+max-height/min-height: Alto maximo y minimo
+max-width/min-width: Ancho maxiximo y minimo
+
+<h2>Box-sizing</h2>
+Indica como se debe calcular el tamaño de un elemento (alto/ancho)
+Nos permite incluir o no el padding y el border en el acho total de un elemento
+<h3>Propiedades</h3>
+content-box: (por defecto) no incluyen el border ni el padding en el alto y ancho
+border-box: el border y el padding se incluyen dentro del alto y ancho
+
+<h2>Unidades y medidas - Absolutas</h2>
+Son fijas en relacion a otras.
+Unidad:      Nombre:               Equivale a
+cm           Centimetros           1cm= 96px/2,54
+mm           Milimetros            1mm= 1/10 de 1cm
+Q            Cuartos de milimetros 1Q= 1/40 de 1cm
+in           Pulgadas              1in= 2,54cm = 96px
+pc           Picas                 1pc= 1/16 de 1in
+pt           Puntos                1pt= 1/72 de 1in
+px           Pixeles               1px= 1/96 de 1in
+
+<h2>Css - unidades y medidas Relativas</h2>
+Son relativas en base a algo, ejemplo: tamaño de letra de un elemento TextoPrincipal
+Ventajas: puedes lograr el tamaño del texto u otros elementos escalen en relacion con todos
+Unidad:      Relativa a:
+em           Tamaño de letra padre
+rem          Tamoalo de la letra del elemento raiz
+vq           1% del ancho de la ventana grafica
+vh           1% de la altura de la ventana grafica
+vmin         1% de la dimension mas pequeña de la ventana grafica
+vmax         1% de la dim,ension mas grande de la ventana grafica
+%            Porcentaje en relacion del valro de la misma propiedad en el elemento padre
+
+<h2>Css-Texto</h2>
+<h3>Propiedades</h3>
+Estilos del tipo de letra
+Estilos de disposicion del texto
+<h3>Tipos de letra</h3>
+font-size: tamaño de la fuente (px,em,etc)
+font-style: estilo de la fuente (normal, italic, oblique)
+font-weight: ancho de la fuente (normal, bold)
+font-family: especifica el tipo de fuente(customizadas de google font)
+color: color de la fuente
+text-transform: (uppercase, lowercase, capitalize, none)
+text-decoration: (none, underline, overline, line-through)
+text-shadow: aplicar sombra a los textos, se especifican 4 valores (horizontal, vertical, desenfoque, color)
+<h3>Disposicion de texto</h3>
+Afectan al espaciado y otras caracteristicas relativas a la disposcion de texto
+(Espacio entre lineas, letras y  como se alinea el texto dentro del div)
+text-align: forma en que el texto se alinea dentro (left,right,center,justify)
+line-height: Interlineado (multiplicador de font-size)
+letter-spaccing: espacio entre letras (unidades de medida)
+word-spacing: espacio entre palabras
+
+<h2>Texto - Fuentes Customizadas</h2>
+Propiedad font-family
+Aplicar la fuente importada desde goole fonts a las propiedades de font-family
+Paso1: @import rul("Link de google fonts")
+Paso2: Aplicamos todo el link con el @import en hoja de estilo
+
+<h2>Iconos</h2>
+FontAwesome, podemos obtenerlos.
+Paso1: Dentro del head, cremaos un link con 1 stylesheet y href: con todo el linkl de font-awesome.
+Paso2: Agregar iconos en nuestro codigo <i class="nombre de la clase"></i> (Donde queres que se visualice)
+
+<h2>Unidades y colores</h2>  256x256x256 = 16.777.216 Colores totales
+palabra clave: red, blue, black
+Valores hexadecimales RGB: #0123DEF del 0 al F 
+Valores RGB Y RGBA: (R,G,B) del 0 a 255 (R,G,B,A) A = opacidad 0 a 1  (0.5) Por ejemplo
+Valores HSL y HSLA: Colores relacion matriz (0 - 360) Saturacion con % - Luminosidad % - HSLA - A = opacidad
+#HSL y HSLA: Se usa en arduino o para programar leds.
+
+<h2>Css - Listas</h2>
+Espaciado: tamaños de texto, altos de linea margen y padding
+Estilos de lista: tipo de lista, posicion, imagen de viñeta
+
+list-style-type: tipo de viñetas cuadradas o circulares "para no ordenadas" / numeros, letras, numeros romanos "para ordenada"
+list-style-position: si aparecen dentro de los elementos de la lista o fuera (outside, inside)
+list-style-image: imagen personalizada para la viñeta en lugar de cuadrado o circular.
+
+<h2>Css - Links</h2>
+<h3>Pseudo clases</h3>
+Link: :link (defecto)
+Visited: :visited (Visitado)
+Hover: :hover(cuando se le pasa por arriba)
+Focus: :focus (estado del link)
+Active: :active (Cuando se le clickea)
+<h3>Propiedades de - Links</h3>
+color: color de link 
+cursor: estilo del cursor (cambia de flechita a manito)
+outline: similar a border pero no ocupa el tamaño en el box model
+
+<h2>Css - Pseudo clases</h2>
+Se proceden por ":"
+Se utilizan para determinar que elemento o propiedad modifica cuando se acciona sobre un elemento
+Empty: Elementos que no tengas hijos :empty 
+p: empty{
+    display: none;
+}
+
+First-child: :first-child  selecciona el primer elemento hijo
+Last-child: :last-child seleciona el ultimo hijo
+Nth-child: :nth-child(N) indicar el determinado elemento hijo con la N (numero/indice) 
+:nth-child(2n): Pares 
+:nth-child(2n+1): Impares 
+:nth-child(5n): Salto de 5
+
+First-of-type: Primero de su tipo  :first-of-type
+Last-of-stype: Ultimo de su tipo   :last-of-type
+Nth-of-Type: Aplica con n          :nth-of-type(n)
+
+Link: Enlaces que no han sido visitados aun :link
+Visited: Enlaces que ya fueron visitados (clickeados) :visited
+a:link {color:darkblue;}
+a:visited {color:gray;}
+
+Focus: Puede ser entrada de datos de form, click o toca elemento o seleciona con tab :focus
+Hover: mouse arriba :hover 
+Active: cuando clickea :active 
+
+<h2>Pseudo Elementos</h2>
+Partes especificas de un elemento
+Son procedidos por "::"
+
+First-Letter: Crear regla para primera letra ::first-letter
+First-Line: Crear regla para primera linea ::first-line
+Before: Primer hijo del elemento ::before 
+After: Ultimo hijo del elemento ::after 
+
+<h2>Tablas</h2>
+Propiedades:
+border-spacing  (Genera espacio entre las columnas de la tabla)
+border-collapse (Elimina espacio entre las columnass de la tabla)
+border, padding, size, (Solo a los td, th) Nó recomienda a los Tr (Se ajusta por celdas)
+td,th {
+    border: 1px solid black;
+    padding: 0.5 rem;
+}
+
+<h2>Overflow</h2>
+Controla lo que sucede con el contenido que es demasiado grande para entrar en una area. 
+Propiedades:
+Visible: (Por Defecto) El desbordamiento es visible.
+Hidden: se oculta el desbordamiento 
+Scroll: el desbordamiento se oculta pero permite scrollear para verlo
+Auto: similar a scroll pero adiciona una barra de desplazamiento para scrollear
+
+<h2>Posicionamiento</h2>
+Position especifica como un elemento se posiciona en un documento.
+offset: top, right, bottom, left (Ubicacion final)
+position: static (Por defecto) no está posicionado
+position: relative - Se comporta igual que el static a menos que agregamos las offset causando un reajuste para adaptarse acvualquier hueco.
+position: absolute - se posiciona en relacion a su ancestro mas cercano, si no lo tiene, usará el body como ancestro.
+position: fixed - respecto a la ventana del navegador, se mantiene en el mismo lugar de la pagina donde estaba ubicado scrolleando inclusive.
+position: sticky - se posiciona segun la posicion de desplazamiento del usuario. Se "Pega" en su lugar de alcanzar una posicion determinada.
+
+<h3>Posicionamiento - z-index</h3>
+Con position y offset: 2 dimensiones.
+Z-index modifica la superposicion de los elementos.
+El elemento con valor z-index mas alto se mostrara adelante que los que tengan  menos valor.
+Valores: 0 a 10 - (Por defecto: 0)
+div1{
+    z-index: 1
+}
+div2{
+    z-index: 2
+}
+
+<h2>Display</h2>
+Propiedad: por defecto.
+display: block - display: inline
+display:block - Comienza con una nueva liunea y se estira hasta el 100% de su ancho (width padre) - <div><p><h1><header><footer>
+display:inline - No ocupan el 100% y si colocamos varios elementos en linea los pone un del lado de otro <span><img><i><a>
+display: none - Se oculta el elemento
+display: flex - Se comporta como 1 elemento de bloque, su contenido es flexbox. Ayuda a distribuir el espacio entre items y mejora la alineacion de los mismos en diferentes tamaños de la pantalla.
+display: grid - Se comporta como  1 elemento de bloque y su contenido es cuadricula. Podemos definir columnas y filas en nuestro diseño grid.
+Los modelos flex y grid es para tablas, con una flexibilidad mayor.
+
+<h2>Layouts floats</h2>
+Imagenes flotando envolviendo un texto. (Se usa mas flexbox y grid)
+
+<h2>FlexBox</h2>
+Caja flexible - Disposicion de elemntos en fila y columnas.
+display: flex (todos sus hijos se convierten en flexibles si se le asigna al padre)
+.conteiner {
+    display:flex;
+}
+.item {
+    padding: 20px;
+}
+
+<h3>FlexBox - FlexDirection </h3>
+flex-direction: colum (Apila verticalmente los elementos flex-items de arriba hacia abajo)
+flex-direction: colum-reverse (Apila verticalmente los flex-items de abajo hacia arriba)
+flex-direction: row (Apila los elementos horizontalmente de izquierda a derecha)
+flex-direction: row-reverse (Apila los elementos horizontales de derecha a izquierda)
+
+<h3>Flexbox - Flex-wrap </h3>
+Define si permanecen en una linea o pueden fluir en otras.
+flex-wrap: nowrap (Por defecto) Se mantienen en la misma Linea
+flex-wrap: wrap (Permite que se acomoden en varias lineas por el tamaño y tamaño de pantalla de dispositivo)
+flex-wrap: wrap-reverse (Igual que el anterior pero se acomodan de abajo derecha hacia arriba izquierda)
+
+<h3>Flexbox - Flexflow</h3>
+Permite establecer propiedades de flex-direction y flex-wrap al mismo tiempo
+flex-flow: row nowrap (Por defecto)
+flex-flow: row wrap (No los apila, los acomoda en base a la pantalla de dispositivo)
+
+<h3>Flexbox - Justify-Content</h3>
+Permite establecer como se destribuyen los item-flex en el elemento padre
+justify-content: flex-start (Por defecto) Ordena los items uno al lado de otro a la izquierda.
+justify-content: flex-end - Los alinea a la derecha
+justify-content: center - Al Centro. 
+justify-content: space-around - deja un espacio a los bordes y entre si.
+justify-content: space-between - distribuye los elementos en si, sin espacio entre bordes
+
+<h3>Flexbox - Align-Items</h3>
+Permite alinear verticalmente los items.
+align-items: center - Al medio del contenedor. 
+align-items: flex-start - En la parte superior izquierda.
+align-items: flex-end: En la parte inferior izquierda.
+align-items: stretch - Estira los elementos para rellenar el alto del contenedor.
+align-items: baseline: Alinea los elementos como sus lineas de base se alinean. (No entendi)
+
+<h3>Flexbox - Centrado perfecto</h3>
+Utilizar:
+.container{
+    display:flex;             Propiedad Flexible
+    align-items: center;      Vertical
+    justify-content: center;  Horizontal
+}
+
+<h3>FlexBox - Flex-Items</h3>
+flex-grow: Definimos cuando crecera un elemento en base a sus hermanos. Valor: 0 (Por defecto)
+div1{
+    flex-grow: 0;
+}
+div2{
+    flex-grow: 1;  (Mas grande)
+}
+flex-shirnk: Definimos cuando se encogerá un elemento a sus hermanos. Valor: 0 (Por defecto)
+flex-basis: Definimos especificar la longitual inicial de un flex-item. Valor: Se utilizane en px.
+flex: Nos permite combinar en una declaracion flwx-grow y flex-basis. 
+order: Nos permite cambiar el orden de un elemento particular. (El segundo al ultimo order: 1)
+align-self: Nos permite hacer un align-item pero de solo un elemento especifico. align-self: flex-end (Ejemplo)
+
+<h2>Grid</h2>
+Grid ofrece un sistema de diseñado basado en cuadriculas. Filas y columnas basicamente. Facilita el diseño para el posicionamiento.
+display: grid (Para convertir el contenedor en grilla)
+Una lista con 6 items
+.div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.div2{
+    item1
+    item2
+    Item3
+    ...
+}
+
+Los acomoda en 2 filas y 3 columnas los 6 items
+
+<h3>Grid - Componentes</h3>
+Columnas: grid columns: lineas verticales
+Filas: grid rows: lineas horizontales
+Espacios: grid gaps: espacios entre columnas y filas (Se puede ajustar con propiedad grid-gap)
+Lineas: grid lines: Son las lineas entre cada columna y filas. Referencia de cuanto ocupa cada elemento.
+Grid Area: Al mismo tiempo, podremos definir un área o junto de celdas y ubicarlas en nuestra grilla. (No entendi)
+
+<h3>Grid - Propiedades</h3>
+grid-template-columns: Define columnas en grilla y ancho.
+grid-template-rows: Define la altura de cada fila. El valor de las filas es definido por los items y las columnas de columns.
+Posibles propiedades para ambos templates:
+none: no hay cuadricula explicita
+absoluta: no negativa (10px, 2cm)
+relativa: no negativa (20%, 3rem)
+auto: Ocupa espacio de manera automatico, se distribuyen de mayera equitativa
+repeat(n, val): Establecer valores petidos, en n el valor de veces a repetir y el valor a repetir. repeat(6,auto) <-- Efectivo
+(Es lo mismo que auto auto auto auto auto.)
+
+grit-template-areas: Nos permite organizar los elementos por nombres.
+grid-template-areas:
+    header header header
+    main   main   aside
+    footer footer footer;
+grid-area: Nombre que le asignamos al area de nuestras grilla.
+Propiedades de area:
+none: no hay grid en areas definidas.
+nombre de grid area: nombre definido para el elemento hijo de grid area.
+. (punto): significa celda vacia.
+
+<h3>Grid - Propiedades - Grid - Items:</h3>
+grid-column-start: linea donde la columna comienza.
+grid-column-end: linea donde la columna termina.
+grid-column: propiedad abreviada para ambas anterior. Se colocan valores start y end [start]/[end] 
+grid-row-start: linea donde la columna comienza
+grid-row-end: linea donde columna termina
+grid-row: propiedad abreviada para ambas anterior. Se colocan valores start y end [start]/[end] 
+
+justify-self: alinea un grid item dentro de una celda a lo largo de la fila.
+Propiedades: stretch (Por defecto), start, end, center. 
+align-self: alinea un grid item dentro de una celdda a lo largo de la columna.
+Propiedades: stretch (Por defecto), start, end, center. 
+
+Practica Grid con este juego: https://cssgridgarden.com/#es
+
+<h2>FlexBox vs Grid</h2>
+Flexbox: 1 dimension. Para componentes.
+Grid: Multidimensiones. Para layouts.
+
+<h2>Media Queries</h2>
+Consultas de medio (En español) son para modificar tu pagina web o apps, en funcion al dispotivo con cual es ejecutado y ajustar su pantalla al mismo.
+(celular, tablet, pc escritorio), se puede modificar caracteristicas y propiedades de todos los elementos. Por lo general anchos y demas. Viewport.
+Verificar: 
+Ancho y alto de la ventana grafica.
+Ancho y alto del dispositivo.
+Orientacion (Por dispositivo, vertical u horizontal)
+Resolucion.
+Se resuelve por un verdadero y falso, cuando resulte verdadero se aplica Ejemplo:
+@media not|only mediatype and (expressions) {
+    CSS-CODE;
+}
+Tambien puede tener difentes hojas de esitlo pasra diferentes medios:
+<link rel="stylesheet" media="mediatype and|not|only(expressions)" href="priont.css">
+Mejor ejemplo:
+@media screen and (max-width: 480px){
+    h1 {
+        font-size: 25px;
+        color: brown;
+    }
+}
+Toda la pagina es normal hasta que se abre con un celular con maximo de 480px aplica esos efectos en este h1. 
+
+<h2>Css - Variables</h2>
+Almacenar valores de propiedades y utilizarlos cuantaws veces lo deseemos. Aclarar dentro de un selector.
+*Se utiliza :root para que la variablea sea global.
+*El nombre de la variable debe comenzar con " --  " (Dos guiones medios) --main--color: red (Tiene case senstive) (Se define)
+*Para llamarla o instanciarla se utiliza la palabra reservada "var" h1 {color: var(--main--color);} (Se usa) 
