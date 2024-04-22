@@ -1,0 +1,22 @@
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style-type: none;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 30px;
+    margin: 0;
+}
+div li{
+    background-color: grey;
+}
+div li img{
+    border-radius: 50%;
+    border: dashed 1px #555;
+}

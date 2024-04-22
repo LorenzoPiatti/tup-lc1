@@ -1,0 +1,32 @@
+body{
+    font-family: sans-serif;
+}
+li{
+    list-style-type: none;
+}
+header h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    padding: 30px;
+    margin: 0;
+}
+nav li{
+    display: flex;
+    align-content: center;
+    background-color: rgb(182, 182, 182);
+}
+nav li a{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    padding: 20px;
+}
+nav li a:hover{
+    color: rgb(185, 185, 185);
+    background-color: rgb(87, 87, 87);
+}
