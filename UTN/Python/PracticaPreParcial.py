@@ -24,31 +24,31 @@ def agregar_nuevo_curso():
     for empleado in empleados:
         if empleado["legajo"] == legajo:
             encontrado = True
+            while True:
+                print("1. Agregar curso")
+                print("2. Salir")
+                opcion = int(input("Ingrese la opcion: "))
+                if opcion == 1:
+                    curso = CursosPreParcial.cursos()
+                    empleado["cursos"].append(curso)
+                    print("El curso se registro correctamente.\n")
+                elif opcion == 2:
+                    break
+                else:
+                    print("Opción inválida. Por favor, ingrese una opción válida.")
     if encontrado == False:
         print("No se encontro empleado con ese legajo.")
-    while encontrado == True:
-        print("1. Agregar curso")
-        print("2. Salir")
-        opcion = int(input("Ingrese la opcion: "))
-        if opcion == 1:
-            curso = CursosPreParcial.cursos()
-            empleado["cursos"].append(curso)
-            print("El curso se registro correctamente.\n")
-        elif opcion == 2:
-            return
-        else:
-            print("Opción inválida. Por favor, ingrese una opción válida.")
-
 
 # 3. Mostrar resumen
 def mostrar_resumen():
-    empleados_ordenados = sorted(empleados, key=lambda x: len(x["cursos"]), reverse=True)
-    print(f"Cantidad de empleados: {len(empleados)}")
+    empleados_ordenados = sorted(empleados, key=lambda e: len(e["cursos"]), reverse=True)
+    print(f"\nCantidad de empleados: {len(empleados)}")
     for empleado in empleados_ordenados:
-        print(f"\nEmpleado: {empleado["nombre"]} - Legajo: {empleado["legajo"]} - Antiguedad: {empleado["antiguedad"]}")
-        print(f"Cursos: {' - '.join(empleado["cursos"])}")
-        print(f"Cantidad de cursos: {len(empleado["cursos"])}")
+        print(f"\nEmpleado: {empleado['nombre']} - Legajo: {empleado['legajo']} - Antiguedad: {empleado['antiguedad']}")
+        print(f"Cursos: {' - '.join(empleado['cursos'])}")
+        print(f"Cantidad de cursos: {len(empleado['cursos'])}")
 
+# Menu Principal
 while True:
     print("\nMenú principal:")
     print("1. Registrar empleados")
