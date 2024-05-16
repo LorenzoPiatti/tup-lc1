@@ -1,4 +1,4 @@
-class Tipo_Documento(str):
+class TipoDocumento(str):
     def __init__(self, tipo_documento:str) -> None:
         self.__tipo_documento = tipo_documento
         

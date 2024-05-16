@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 from datetime import date
-from tipo_documento import Tipo_Documento
+from tipo_documento import TipoDocumento
 
 class Persona(ABC):
     @abstractmethod
-    def __init__(self, nombre:str, apellido:str, fecha_nacimiento:date, nro_documento:int, tipo_documento: Tipo_Documento) -> None:
-        self._nombre = nombre
+    def __init__(self, nombre:str, apellido:str, fecha_nacimiento:date, nro_documento:int, tipo_documento: TipoDocumento) -> None:
+        self._nombre = nombre # Atributo protegido
         self._apellido = apellido
         self._fecha_nacimiento = fecha_nacimiento
         self._nro_documento = nro_documento
@@ -43,8 +43,8 @@ class Persona(ABC):
     def set_nro_documento(self, new_nro_documento:int) -> None:
         self._nro_documento = new_nro_documento
         
-    def get_tipo_documento(self) -> Tipo_Documento:
+    def get_tipo_documento(self) -> TipoDocumento:
         return self._tipo_documento
     
-    def set_tipo_documento(self, new_tipo_documento: Tipo_Documento) -> None:
+    def set_tipo_documento(self, new_tipo_documento: TipoDocumento) -> None:
         self._tipo_documento = new_tipo_documento
